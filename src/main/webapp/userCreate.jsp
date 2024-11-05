@@ -17,79 +17,79 @@
 
 <style type="text/css">
 
-/* ======= TAG LAYOUT ======== */
-
-body {
+	/* ======= TAG LAYOUT ======== */
 	
-	margin: 0;
+	body {
+		
+		margin: 0;
+		
+		padding: 0;
+		
+		line-height: 1.6;
+		
+		letter-spacing: 1px;
+		
+		font-family: Verdana,Helvetica,sans-serif;
+		
+		font-size: 12px;
+		
+		color: #333;
+		
+		background: #fff;
+		
+	}
 	
-	padding: 0;
+	table {
+		
+		text-align: center;
+		
+		margin: 30px auto;
+		
+	}
 	
-	line-height: 1.6;
+	/* ======= ID LAYOUT ======== */
 	
-	letter-spacing: 1px;
+	#top {
 	
-	font-family: Verdana,Helvetica,sans-serif;
+		width: 780px;
+		
+		margin: 30px auto;
+		
+		border: 1px solid #333;
 	
-	font-size: 12px;
+	}
 	
-	color: #333;
+	#header{
 	
-	background: #fff;
+		width: 100%;
+		
+		height: 80px;
+		
+		background-color: black;
 	
-}
-
-table {
+	}
 	
-	text-align: center;
+	#main{
 	
-	margin: 30px auto;
+		width: 100%;
+		
+		height: 500px;
+		
+		text-align: center;
 	
-}
-
-/* ======= ID LAYOUT ======== */
-
-#top {
-
-	width: 780px;
+	}
 	
-	margin: 30px auto;
+	#footer{
 	
-	border: 1px solid #333;
-
-}
-
-#header{
-
-	width: 100%;
+		width: 100%;
+		
+		height: 80px;
+		
+		background-color: black;
+		
+		clear: both;
 	
-	height: 80px;
-	
-	background-color: black;
-
-}
-
-#main{
-
-	width: 100%;
-	
-	height: 500px;
-	
-	text-align: center;
-
-}
-
-#footer{
-
-	width: 100%;
-	
-	height: 80px;
-	
-	background-color: black;
-	
-	clear: both;
-
-}
+	}
 
 </style>
 
