@@ -40,10 +40,159 @@
 
     }
 
+    table{
+
+        text-align: center;
+
+        margin: 0 auto;
+
+    }
+
+    /* ============ID LAYOUT============ */
+
+    #top{
+
+        width: 780px;
+
+        margin: 30px auto;
+
+        border: 1px solid #333;
+
+    }
+
+    #header{
+
+        width: 100%;
+
+        height: 500px;
+
+        background-color: black;
+
+    }
+
+    #main{
+
+        width: 100%;
+
+        height: 500px;
+
+        text-align: center;
+
+    }
+
+    #footer{
+
+        width: 100%;
+
+        height: 500px;
+
+        background-color: black;
+
+        clear: both;
+
+    }
+
 </style>
 
 </head>
 <body>
+
+    <div id="header">
+
+        <div id="pr">
+
+        </div>
+
+    </div>
+
+    <div id="main">
+
+        <div id="top">
+
+            <p>buyItemConfirm</p>
+
+        </div>
+
+        <div>
+
+            <s:form action="buyItemConfirmAction">
+    
+                <table>
+    
+                    <tr>
+    
+                        <td>商品名</td>
+    
+                        <td>
+                            
+                            <s:property value="session.buyItem_name"/>
+                        
+                        </td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td>値段</td>
+    
+                        <td>
+    
+                            <s:property value="session.buyItem_price"/>
+    
+                            <span>円</span>
+    
+                        </td>
+                    </tr>
+    
+                    <tr>
+    
+                        <td>購入個数</td>
+    
+                        <td>
+    
+                            <s:property value="session.stock"/>
+    
+                            <span>個</span>
+    
+                        </td>
+                    </tr>
+    
+                    <tr>
+    
+                        <td>支払い方法</td>
+    
+                        <td>
+    
+                            <s:property value="session.pay"/>
+    
+                        </td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td>
+    
+                            <s:submit value="完了"/>
+                            
+                        </td>
+                    </tr>
+    
+                </table>
+    
+            </s:form>
+    
+        </div>
+
+    </div>
+
+    <div id="footer">
+
+        <div id="pr">
+
+        </div>
+        
+    </div>
 
 </body>
 </html>
