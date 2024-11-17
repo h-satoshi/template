@@ -7,7 +7,7 @@
 <html>
 <head>
 
-<meta http-equiv="content-Type" content="text/html" charset="UTF-8"/>
+<meta http-equiv="content-Type" content="text/html; charset=UTF-8"/>
 <meta http-equiv="content-Style-Type" content="text/css"/>
 <meta http-equiv="content-Script-Type" content="text/javascript"/>
 <meta http-equiv="imagetoolbar" content="no"/>
