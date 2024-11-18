@@ -1,6 +1,8 @@
 package com.diworksdev.template.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.diworksdev.template.dto.MyPageDTO;
@@ -20,6 +22,80 @@ public class MyPageDAO {
 					+ "ubit.pay FROM user_buy_item_transaction ubit LEFT JOIN item_info_transaction iit ON"
 					+ "ubit.item_transaction_id = iit.id WHERE ubit.item_transaction_id = ? AND"
 					+ "ubit.user_master_id = ? ORDER BY ubit.insert_date DESC";
+		
+		try {
+			
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			
+			preparedStatement.setString(1, item_transaction_id);
+			
+			preparedStatement.setString(2, user_master_id);
+			
+			ResultSet resultSet = preparedStatement.executeQuery();
+			
+			
+			if (resultSet.next()) {
+				
+				myPageDTO.setItemName(resultSet.getString("total_price"));
+				
+				myPageDTO.setTotalPrice(resultSet.getString("total_price"));
+				
+				myPageDTO.setTotalPrice(resultSet.getString("total_count"));
+				
+				myPageDTO.setPayment(resultSet.getString("pay"));
+				
+			}
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			
+			connection.close();
+			
+		}
+		
+		return myPageDTO;
+		
+	}
+	
+	public int buyItemHistoryDelete(String item_transaction_id, String user_master_id) throws SQLException {
+		
+		DBConnector dbConnector = new DBConnector();
+		
+		Connection connection =dbConnector.getConnection();
+		
+		String sql = "DELETE FROM user_buy_item_trasaction WHERE "
+				   + "item_transaction_id = ? AND user_master_id = ?";
+		
+		PreparedStatement preparedStatement;
+		
+		int result = 0;
+		
+		
+		try {
+			
+			preparedStatement = connection.prepareStatement(sql);
+			
+			preparedStatement.setString(1, item_transaction_id);
+			
+			preparedStatement.setString(2, user_master_id);
+			
+			
+			result = preparedStatement.executeUpdate();
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			
+			connection.close();
+			
+		}
+		
+		return result;
 		
 	}
 
