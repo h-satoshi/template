@@ -66,6 +66,38 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 		
 		String user_master_id = session.get("login_user_id").toString();
 		
+		int res = myPageDAO.buyItemHistoryDelete(item_transaction_id, user_master_id);
+		
+		if (res > 0) {
+			
+			session.put("message", "商品情報を正しく削除しました。");
+			
+		} else if (res == 0) {
+			
+			session.put("massage", "商品情報の削除に失敗しました。");
+			
+		} 
+		
+	}
+	
+	public String getDeleteFlg() {
+		
+		return deleteFlg;
+		
+	}
+	
+	public void setDeleteFlg(String deleteFlg) {
+		
+		this.deleteFlg = deleteFlg;
+		
+	}
+	
+	@Override
+	
+	public void setSession(Map<String, Object> loginSessionMap) {
+		
+		this.session = loginSessionMap;
+		
 	}
 
 }
