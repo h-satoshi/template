@@ -166,11 +166,45 @@
                     </tr>
 
                 </table>
+                
+                <s:form action="MyPageAction">
+                
+                	<input type="hidden" name="deleteFlg" value="1">
+                	
+                	<s:submit value="削除" method="delete"/>
+                
+                </s:form>
 
             </s:if>
+            
+            <s:if test="session.message != null">
+            
+            	<h3><s:property value="session.massage"/></h3>
+            
+            </s:if>
+            
+            <div>
+            
+            	<br>
+            	
+            	<span>前画面に戻る場合は</span>
+            	
+            	<a href='<s:url action = "HomeAction"/>'>ログアウト</a>
+            	
+            	<span>をお願いします</span>
+            
+            </div>
 
         </div>
 
+    </div>
+    
+    <div id="footer">
+    
+    	<div id="pr">
+    	
+    	</div>
+    
     </div>
 
 </body>
