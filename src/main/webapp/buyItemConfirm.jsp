@@ -64,7 +64,7 @@
 
         width: 100%;
 
-        height: 500px;
+        height: 80px;
 
         background-color: black;
 
@@ -84,7 +84,7 @@
 
         width: 100%;
 
-        height: 500px;
+        height: 80px;
 
         background-color: black;
 
