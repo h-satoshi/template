@@ -27,12 +27,12 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 		
 		if (deleteFlg == null) {
 			
-			String item_trasaction_id = session.get("id").toString();
+			String item_transaction_id = session.get("id").toString();
 			
 			String user_master_id = session.get("login_user_id").toString();
 			
 			
-			myPageDTO = myPageDAO.getMyPageUserInfo(item_trasaction_id, user_master_id);
+			myPageDTO = myPageDAO.getMyPageUserInfo(item_transaction_id, user_master_id);
 			
 			session.put("buyItem_name", myPageDTO.getItemName());
 			

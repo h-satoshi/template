@@ -36,11 +36,11 @@ public class MyPageDAO {
 			
 			if (resultSet.next()) {
 				
-				myPageDTO.setItemName(resultSet.getString("total_price"));
+				myPageDTO.setItemName(resultSet.getString("item_name"));
 				
 				myPageDTO.setTotalPrice(resultSet.getString("total_price"));
 				
-				myPageDTO.setTotalPrice(resultSet.getString("total_count"));
+				myPageDTO.setTotalCount(resultSet.getString("total_count"));
 				
 				myPageDTO.setPayment(resultSet.getString("pay"));
 				
@@ -66,7 +66,7 @@ public class MyPageDAO {
 		
 		Connection connection =dbConnector.getConnection();
 		
-		String sql = "DELETE FROM user_buy_item_trasaction WHERE "
+		String sql = "DELETE FROM user_buy_item_transaction WHERE "
 				   + "item_transaction_id = ? AND user_master_id = ?";
 		
 		PreparedStatement preparedStatement;

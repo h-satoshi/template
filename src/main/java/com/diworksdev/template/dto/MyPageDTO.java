@@ -41,7 +41,7 @@ public class MyPageDTO {
 		
 	}
 	
-	public void setTptalCount(String totalCount) {
+	public void setTotalCount(String totalCount) {
 		
 		this.totalCount = totalCount;
 		

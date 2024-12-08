@@ -115,7 +115,7 @@
 
         <div>
 
-            <s:form action="buyItemConfirmAction">
+            <s:form action="BuyItemConfirmAction">
     
                 <table>
     
