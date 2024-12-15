@@ -23,7 +23,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 		
 		MyPageDTO myPageDTO = new MyPageDTO();
 		
-		//`商品履歴を削除しない場合
+		//商品履歴を削除しない場合
 		
 		if (deleteFlg == null) {
 			
