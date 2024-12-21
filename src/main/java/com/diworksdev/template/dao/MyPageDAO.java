@@ -65,7 +65,7 @@ public class MyPageDAO {
 
 		Connection connection = dbConnector.getConnection();
 
-		String sql = "ELETE FROM user_buy_item_transaction WHERE"
+		String sql = "DELETE FROM user_buy_item_transaction WHERE"
 					+"item_transaction_id = ? AND user_master_id = ?";
 
 		PreparedStatement preparedStatement;
