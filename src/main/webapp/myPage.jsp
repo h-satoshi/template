@@ -152,7 +152,7 @@ pageEncoding="UTF-8" %>
 
 							<s:property value="session.total_count"/>
 
-							<span> 個 </s pan>
+							<span> 個 </span>
 
 						</td>
 
@@ -176,7 +176,7 @@ pageEncoding="UTF-8" %>
 
 					<input type="hidden" name = "deleteFlg" value ="1">
 
-					<s:submit value="削 除 " method="delete" />
+					<s:submit value="削 除" method="delete" />
 
 				</s:form>
 
