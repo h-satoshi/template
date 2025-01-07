@@ -43,7 +43,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 
 			session.put("message", "");
 
-			// 商品履歴を削除する場合
+		// 商品履歴を削除する場合
 
 		} else if(deleteFlg.equals("1")) {
 
